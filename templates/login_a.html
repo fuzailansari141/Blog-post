@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Blog Post</title>
+    {% endblock %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style1.css')}}">
+</head>
+
+<body>
+    {% block content %}
+    <center>
+        <h1>Author</h1>
+        <p><h2>Log-in</h2></p>
+        <p><h3>Don't have an account?<a href="/reg_a">Sign-up</a></h3></p>
+        <form action="/check_a" method="post">
+            <table>
+                <tr>
+                    <td><b>Username</b></td>
+                </tr>
+                <tr>
+                    <td><input type="text" name="Username" placeholder="Username"></td>
+                </tr>
+                <tr>
+                    <td><b>Password</b></td>
+                </tr>
+                <tr>
+                    <td><input type="password" name="Password" placeholder="Password"></td>
+                </tr>
+            </table>
+            <input type="submit" value="Log-in">
+            <p><h3><a href="/">Home</a></h3></p>
+        </form>
+    </center>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <center><h4><b>{{msg}}</b></h4></center>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    {% endblock %}
+</body>
+
+</html>

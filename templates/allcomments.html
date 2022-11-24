@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        table {
+            background-color: black;
+            border-radius: 25px;
+            padding: 10px;
+        }
+
+        b {
+            color: gray;
+            font-size: 18px;
+        }
+
+        a {
+            color: white;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="w3-container">
+        {% for i in i %}
+
+        <table>
+            <tr>
+                <td><b>{{i[1]}}</b></td>
+            </tr>
+            <tr>
+                <h4>
+                    <td style="color: lightblue;">{{i[2]}}</td>
+                </h4>
+            </tr>
+            {% if user==i[1] %}
+            <tr>
+                <td>
+                    <div>
+                        <a href="/del_c/{{i[0]}}/{{user}}/{{id_a}}"><i class="fa fa-trash"></i></a>
+                    </div>
+                </td>
+            {% endif %}
+        </table>
+        &nbsp;
+        {% endfor %}
+    </div>
+        <p><a href="/user/{{user}}" style="color: black;">Back</a></p>  
+</body>
+
+</html>

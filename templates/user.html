@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Blog Post</title>
+    {% endblock %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style4.css')}}">
+</head>
+
+<body>
+    {% block content %}
+    <center>
+        <h2>All Blog</h2>
+    </center>
+    {% for i in i %}
+    <fieldset>
+        <table>
+            <tr>
+                <td><b>Authorname:</b></td>
+                <td><b><i>{{i[1]}}</i></b></td>
+            </tr>
+            <tr>
+                <td><b>Blog title:</b></td>
+                <td><b><i>{{i[2]}}</i></b></td>
+            </tr>
+            <tr>
+                <td><b>Blog :</b></td>
+                <td><b><i>{{i[3]}}</i></b></td>
+            </tr>
+            <tr>
+                <td><b>Posted:</b></td>
+                <td><b><i>{{i[4]}}</i></b></td>
+            </tr>
+            <form action="/comment/{{user}}/{{i[0]}}" method="post">
+                <tr>
+                    <td>
+                        <textarea name="comment" id="comment" cols="30" rows="2" placeholder="Write comment here....."></textarea>
+                    </td>
+                    <td>
+                        <input type="submit" value="Post">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <a href="/allcomments/{{user}}/{{i[0]}}">Comments</a>
+                    </td>
+                </tr>
+            </form>
+        </table>
+    </fieldset>
+    &nbsp;
+    {% endfor %}
+    <h3><a href="/logout">Logout</a></h3>
+    {% endblock %}
+</body>
+
+</html>

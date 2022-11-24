@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Blog Post</title>
+    {% endblock %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style2.css')}}">
+</head>
+
+<body>
+    {% block content %}
+    <center>
+        <h1>Add Blog</h1>
+        <form action="/insert_b/{{now}}/{{username}}" method="post">
+            <table>
+                <tr>
+                    <td><b>Authorname:</b></td>
+                    <td><input type="text" name="Authorname" placeholder="Must be username"></td>
+                </tr>
+                <tr>
+                    <td><b>Blog title:</b></td>
+                    <td><input type="text" name="Blog title"></td>
+                </tr>
+                <tr>
+                    <td><b>Blog:</b></td>
+                    <td><textarea name="Blog" cols="30" rows="10"></textarea></td>
+                </tr>
+            </table>
+            <input type="submit" value="Post">              
+            <p><a href="/author/{{username}}">Back</a></p>
+        </form>
+    </center>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <center><h4><b>{{msg}}</b></h4></center>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    {% endblock %}
+</body>
+
+</html>

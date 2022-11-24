@@ -1,0 +1,79 @@
+body{
+    background-color: white;
+}
+table{
+    background-color: rgba(170,170,170);  
+    box-sizing: border-box;
+    border-spacing: 10px;
+    box-shadow: -30px 30px 20px rgba(0,0,0,0.3);
+    padding: 50px;
+}
+
+a{
+    color: #0a66c2;
+}
+
+a:hover{
+    color: white;
+    border: 2px;
+    border-radius: 12px;
+    padding: 5px;
+    background-color: #0a66c2;
+}
+input{
+    outline: none;
+    background-color: rgba(0,0,0,0.0);
+    border: 3px solid lightgray;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+input:hover{
+    border-color: #0a66c2;
+}
+
+input:focus{
+    border-color: #0a66c2;
+}
+
+input[value=Sign-up]{
+    color: white;
+    width: 12%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    background-color:  #0a66c2;
+    cursor: pointer;
+}
+input[value=Sign-up]:hover{
+    color: #0a66c2;
+    background-color: white;
+}
+
+input[value=Log-in]{
+    color: white;
+    width: 9%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    background-color:  #0a66c2;
+    cursor: pointer;
+}
+
+input[value=Log-in]:hover{
+    color: #0a66c2;
+    background-color: white;
+}
+
+h4{
+    color: red;
+}
+

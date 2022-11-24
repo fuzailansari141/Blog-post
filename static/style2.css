@@ -1,0 +1,72 @@
+
+table{
+    background-color: rgb(253, 231, 235);  
+    box-sizing: border-box;
+    box-shadow: -30px 30px 20px rgba(0,0,0,0.3);
+    padding: 50px;
+}
+
+a{
+    color: rgb(14, 12, 13);
+    font-weight: bold;
+}
+
+a:hover{
+    color: white;
+    border: 2px;
+    border-radius: 12px;
+    padding: 5px;
+    background-color: rgb(14, 12, 13);
+}
+
+input{
+    outline: none;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+input:hover{
+    border-color: rgb(160, 6, 6);
+}
+
+input:focus{
+    border-color: rgb(160, 6, 6);
+}
+
+input[value=Post]{
+    color: white;
+    width: 9%;
+    padding: 10px;
+    border-radius: 20px;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px 0;
+    border: none;
+    outline: none;
+    background-color:  rgb(14, 12, 13);
+    cursor: pointer;
+}
+input[value=Post]:hover{
+    color: black;
+    background-color: white;
+}
+
+textarea{
+    outline: none;
+    border: 3px solid black;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+textarea:hover{
+    border-color: rgb(160, 6, 6);
+}
+
+textarea:focus{
+    border-color: rgb(160, 6, 6);
+}
+
+h4{
+    color: red;
+}

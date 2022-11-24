@@ -1,0 +1,25 @@
+
+body{
+    background-image: url("pexels-jess-bailey-designs-743986.jpg");
+    background-color: rgb(252, 202, 210);
+    background-size: 1000px;
+}
+h1{
+    color: black;
+    text-align: center;
+    font-size: 500%;
+}
+
+button{
+    color: white;
+    background-color:  #0a66c2;
+    cursor: pointer;
+    border: 2px;
+    border-radius: 12px;
+    padding: 20px;
+}
+button:hover{
+    color: black;
+    background-color: white;
+}
+

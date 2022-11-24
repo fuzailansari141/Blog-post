@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Blog Post</title>
+    {% endblock %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style3.css')}}">
+</head>
+
+<body>
+    {% block content %}
+    <center>
+        <h1>Welcome to your Interface</h1>
+        <a href="/addpost/{{username}}"><button><b>Add Blog</b></button></a>
+        <p><a href="/viewpost/{{username}}"><button><b>View Blog</b></button></a></p>
+        <a href="/logout"><h3>Log out</h3></a>
+    </center>
+    {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Blog Post</title>
+    {% endblock %}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style4.css')}}">
+</head>
+
+<body>
+    {% block content %}
+    {% if i!=() %}
+    <center>
+        <h2>Your Blog</h2>
+    </center>
+    {% endif %}
+    {% for i in i %}
+    <fieldset>
+        <table>
+            <tr>
+                <td><b>Authorname:</b></td>
+                <td><b><i>{{i[1]}}</i></b></td>
+            </tr>
+            <tr>
+                <td><b>Blog title:</b></td>
+                <td><b><i>{{i[2]}}</i></b></td>
+            </tr>
+            <tr>
+                <td><b>Blog :</b></td>
+                <td><b><i>{{i[3]}}</i></b></td>
+            </tr>
+            <tr>
+                <td><b>Posted:</b></td>
+                <td><b><i>{{i[4]}}</i></b></td>
+            </tr>
+        </table>
+        <a href="/edit?id={{i[0]}}">Edit</a>&nbsp;
+        <a href="/delete/{{i[1]}}/{{i[2]}}">Delete</a></tr>
+        <a href="/coms/{{i[0]}}/{{username}}">comments</a>
+    </fieldset>
+    &nbsp;
+    {% endfor %}
+    {% if i==() %}
+    <center>
+        <h1>No Blog Posted</h1>
+        <h3><a href="/addpost/{{username}}">Add Blog</a></h3>
+    {% endif %}
+        <h3><p><a href="/author/{{username}}">Back</a></p></h3>       
+    </center>
+    {% endblock %}
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+create database blogpost;
+use blogpost;
+create table author(id int primary key auto_increment,Username varchar(50),Password varchar(50),Emailid varchar(50),City varchar(50));
+create table user(id int primary key auto_increment,Username varchar(50),Password varchar(50),Emailid varchar(50),City varchar(50));
+create table addpost(id int primary key auto_increment,Authorname varchar(50),Blogtitle varchar(100),blog text,posted date);
+create table comments(id int primary key auto_increment,Username varchar(50),Comment text,id_a int);

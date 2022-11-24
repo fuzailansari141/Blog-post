@@ -1,0 +1,38 @@
+body{
+    background-image: url("joanna-kosinska-PbgY3ptgA4A-unsplash.jpg");
+    background-size: 1300px;
+}
+
+h1{
+    color: rgb(252, 202, 210);
+    font-size: 400%;
+}
+
+button{
+    color: rgb(160, 6, 6);
+    background-color: rgb(252, 202, 210);
+    cursor: pointer;
+    border: 2px;
+    width: 12%;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+button:hover{
+    color: rgb(252, 202, 210);
+    width: 12%;
+    background-color: rgb(160, 6, 6);
+}
+
+a{
+    color: rgb(252, 202, 210);
+}
+
+h3:hover{
+    color: rgb(160, 6, 6);
+    width: 5%;
+    border: 2px;
+    border-radius: 12px;
+    padding: 5px;
+    background-color: rgb(252, 202, 210);
+}

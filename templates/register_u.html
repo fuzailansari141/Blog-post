@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Blog Post</title>
+    {% endblock%}
+    <link rel="stylesheet" type="text/css" href="{{url_for('static', filename='style1.css')}}">
+</head>
+
+<body>
+    {% block content %}
+    <center>
+        <form action="/insert_u" method="post">
+            <table>
+                <thead>
+                    <h1>User</h1>
+                    <p><h2>Sign-up</h2></p>
+                    <p><h3>Already have an account?<a href="/log_u">log-in</a></h3></p>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Username</b></td>
+                        <td><b>Password</b></td>                    
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="Username" placeholder="Must be in small letters"></td>
+                        <td><input type="password" name="Password" placeholder="Password"></td>
+                    </tr>
+                    <tr>
+                        <td><b>Emailid</b></td>
+                        <td><b>City</b></td>                     
+                    </tr>
+                    <tr>
+                        <td><input type="email" name="Emailid" placeholder="Emailid"></td>
+                        <td><input type="text" name="City" placeholder="City"></td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="submit" value="Sign-up">
+            <p><h3><a href="/">Home</a></h3></p>
+        </form>
+    </center>
+    {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            {% for msg in messages %}
+                <center><h4><b>{{msg}}</b></h4></center>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    {% endblock%}
+</body>
+
+</html>

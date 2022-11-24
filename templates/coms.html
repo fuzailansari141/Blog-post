@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        table{
+            background-color: black;
+            border-radius: 25px;
+            padding: 10px;
+        }
+        
+        b{
+            color: gray;
+            font-size: 18px;
+        }
+
+        a {
+            color: white;
+            font-weight: bold;
+        }
+
+        a:hover {
+            color: gray;
+        }
+    </style>
+</head>
+<body>
+    <div class="w3-container">
+        {% for i in i %}
+            <table>
+                <tr>
+                    <td><b>{{i[1]}}</b></td>
+                </tr>
+                <tr>
+                    <h4><td style="color: lightblue;">{{i[2]}}</td></h4>
+                </tr>
+                <tr>
+                    <td>
+                        <div>
+                            <a href="/del_a/{{i[0]}}/{{username}}/{{id_a}}"><i class="fa fa-trash"></i></a>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+            &nbsp;
+        {% endfor %}
+        <p><a href="/viewpost/{{username}}" style="color: black;">Back</a></p>
+    </div>
+</body>
+</html>
